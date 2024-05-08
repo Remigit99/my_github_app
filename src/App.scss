@@ -1,0 +1,46 @@
+
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+
+:root{
+
+    --clr-bg1: #010409;
+    --clr-gray1: #848D97;
+    --clr-white: #E6EDF3;
+    --clr-green: #3E8636;
+    --clr-gray2: #0D1117;
+    --clr-gray3: #79828B;
+    --clr-blue: #4C93F8;
+
+
+
+    --container-width-lg: 96%
+}
+
+
+body{
+    font-family: "Jost", sans-serif;
+    color: var(--clr-white);
+}
+
+.container{
+width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+@import "./styles/navbar.scss"
