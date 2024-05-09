@@ -43,4 +43,13 @@ img{
     object-fit: contain;
 }
 
-@import "./styles/navbar.scss"
+input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    color: var(--clr-white)
+}
+
+@import "./styles/navbar.scss";
+@import "./styles/main-content.scss"

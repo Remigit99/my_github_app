@@ -8,6 +8,8 @@ nav{
     right: 0;
     display: grid;
     place-items: center;
+    // box-shadow: 1rem 0 3px var(--clr-gray1);
+    border-bottom: 1px solid var(--clr-gray3);
 
 
 .nav__container{

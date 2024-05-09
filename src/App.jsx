@@ -2,6 +2,7 @@
 
 import './App.scss'
 import Navbar from './components/Navbar'
+import MainContent from './MainContent'
 
 const App = () => {
   // const [count, setCount] = useState(0)
@@ -9,6 +10,7 @@ const App = () => {
   return (
     <>
     <Navbar/>
+    <MainContent/>
 
     </>
   )

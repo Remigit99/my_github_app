@@ -1,0 +1,53 @@
+.main__content-left{
+    background-color: var(--clr-gray2);
+    padding: 4rem 1.5rem 1rem;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-color: transparent;
+
+
+    .left__header-title{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.2rem;
+        align-items: center;
+
+        button{
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+
+            .icon{
+                font-size: 1.2rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    .find__repo{
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--clr-gray1);
+        margin-top: 0.8rem;
+        background-color: var(--clr-gray2);
+    }
+
+
+
+    .left__newrepo-btn{
+        background-color: var(--clr-green);
+        padding: 0.5rem;
+        color: var(--clr-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+
+::-webkit-scrollbar{
+    scrollbar-color: transparent;
+
+}

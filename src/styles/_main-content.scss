@@ -1,0 +1,9 @@
+
+
+.main__content{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+@import "./main-content-right";
+@import "./main-content-left";
