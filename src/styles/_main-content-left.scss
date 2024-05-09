@@ -1,6 +1,6 @@
 .main__content-left{
     background-color: var(--clr-gray2);
-    padding: 4rem 1.5rem 1rem;
+    padding: 2rem 1.5rem 1rem;
     height: 100vh;
     overflow-y: scroll;
     scrollbar-color: transparent;
@@ -43,11 +43,41 @@
         align-items: center;
     }
 
+    .content__left-repolinks{
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+        margin-top: 1.2rem;
+
+        .repo__links{
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        cursor: pointer;
+
+        }
+    }
+
+    .show__more{
+        margin-top: 1.5rem;
+        color: var(--clr-gray1);
+        cursor: pointer;
+    }
+
 
 }
 
 
-::-webkit-scrollbar{
-    scrollbar-color: transparent;
+/*======= Hide scrollbar for Chrome, Safari and Opera ====*/
+.main__content-left::-webkit-scrollbar{
+    display: none;
 
+}
+
+
+/*======= Hide scrollbar for IE, Edge and Firefox ====*/
+.main__content-left{
+    -ms-text-overflow: none;
+    text-overflow: none;
+    scrollbar-width: none;
 }

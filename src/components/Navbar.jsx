@@ -5,7 +5,8 @@ import { BiPlus } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaRegBell } from "react-icons/fa";
 
-import AvatarImg from '../assets/avatar_img.jpg'
+
+import UserAvatar from "./UserAvatar";
 
 const Navbar = () => {
   return (
@@ -42,9 +43,7 @@ const Navbar = () => {
             <FaRegBell className = "nav__icon" />
           </div>
 
-          <div className="profile__avatar">
-            <img src={AvatarImg} alt="Avatar_image" />
-          </div>
+        <UserAvatar/>
         </div>
       </div>
     </nav>
