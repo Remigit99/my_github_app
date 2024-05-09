@@ -1,4 +1,30 @@
+.main__content-right {
+  background-color: var(--clr-bg1);
+  padding: 1.5rem;
 
-.main__content-right{
-    background-color: var(--clr-bg1);
+  .content__right-main {
+    h2 {
+      text-align: center;
+    }
+
+    .repos__main {
+        margin-top: 3rem;
+      .repos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        .repo{
+            background-color: var(--clr-gray1);
+            padding: 0.5rem;
+            border-radius: 1rem;
+        }
+      }
+    }
+
+    .fetching{
+        text-align: center;
+        margin: 5rem auto;
+    }
+  }
 }

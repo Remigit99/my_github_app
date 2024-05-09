@@ -1,8 +1,43 @@
+import { useState, useEffect } from "react";
+import Repos from "./Repos";
+
 const MainContentRight = () => {
-  return <div className="main__content-right">
-    main__content-right
-    
-    </div>;
+  const [repos, setRepo] = useState([]);
+  const [isloading, setIsLoading] = useState(false);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [reposPerPage, setReposPerPage] = useState(10);
+
+  useEffect(() => {
+    const fectchData = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+        const data = await response.json();
+        // console.log(data)
+        setRepo(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fectchData();
+  }, []);
+
+  return (
+    <div className="main__content-right">
+      <div className="content__right-main">
+        <h2>Repositories (100)</h2>
+
+        <div className="repos__main">
+
+          <Repos isloading={isloading} repos={repos} />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default MainContentRight;
