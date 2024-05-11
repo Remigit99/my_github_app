@@ -20,6 +20,7 @@
     --clr-gray2: #0D1117;
     --clr-gray3: #79828B;
     --clr-blue: #4C93F8;
+    
 
     --transition: all 350ms ease-in-out;
 
@@ -54,5 +55,6 @@ input{
 @import "./styles/navbar.scss";
 @import "./styles/main-content.scss";
 @import "./styles/user-avatar.scss";
-@import "./styles/mygithubbio.scss"
+@import "./styles/mygithubbio.scss";
+@import "./styles/_pagination.scss";
 

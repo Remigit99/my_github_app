@@ -8,16 +8,49 @@
     }
 
     .repos__main {
-        margin-top: 3rem;
+        margin-top: 2rem;
       .repos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
 
+
+
         .repo{
-            background-color: var(--clr-gray1);
-            padding: 0.5rem;
+            background-color: var(--clr-gray2);
+            padding: 0.85rem;
             border-radius: 1rem;
+
+            .repo__header{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 0.9rem;
+
+              h4{
+                a{
+font-size: 1.1rem;
+                  color: var(--clr-blue);
+                }
+               
+              }
+
+              .repo__visibility{
+                padding: 0.5rem;
+                border: 1px solid var(--clr-white);
+                border-radius: 2rem;
+              }
+            }
+
+            .repo__desc{
+              margin: 1rem 0;
+            }
+
+            .repo_more-info{
+              display: flex;
+              align-items: center;
+              gap: 1.2rem;
+            }
         }
       }
     }
@@ -27,4 +60,20 @@
         margin: 5rem auto;
     }
   }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .repos__main {
+    margin-top: 2rem;
+  .repos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+  }
+  
+}
+
 }

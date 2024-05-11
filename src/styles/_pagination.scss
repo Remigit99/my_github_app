@@ -1,0 +1,17 @@
+
+
+.pagination {
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+
+    button {
+        padding: 0.85rem;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+  }
+  
+ 
