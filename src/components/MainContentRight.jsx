@@ -35,7 +35,7 @@ const MainContentRight = () => {
   return (
     <div className="main__content-right">
       <div className="content__right-main">
-        <h2>Repositories (100)</h2>
+        <h2>Repositories : {repos.length}</h2>
 
         <div className="repos__main">
 

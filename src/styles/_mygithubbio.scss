@@ -1,0 +1,93 @@
+@mixin marginItem {
+  margin: 1.2rem 0;
+}
+@mixin flexItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  @include marginItem()
+}
+
+.content__left-main {
+  margin-top: 2rem;
+  // background-color: red;
+
+  .user__detail {
+    .avatar__img {
+      width: 5rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+
+      img {
+        display: grid;
+        place-content: center;
+      }
+    }
+
+    h2 {
+      @include marginItem();
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      @include marginItem();
+    }
+
+    .github__link {
+      @include marginItem();
+
+      a {
+        @include flexItem();
+        background-color: var(--clr-bg1);
+        padding: 0.35rem 0;
+        color: var(--clr-white);
+        border-radius: 2rem;
+        transition: var(--transition);
+        font-weight: 500;
+
+        &:hover {
+          background-color: var(--clr-blue);
+        }
+      }
+    }
+
+    .portfolio {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include marginItem();
+        color: var(--clr-white);
+        transition: var(--transition);
+
+       
+        &:hover {
+            color: var(--clr-blue);
+
+          }
+      }
+    }
+
+    .resume {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--clr-white);
+        transition: var(--transition);
+
+
+        &:hover {
+            color: var(--clr-blue);
+          }
+      }
+    }
+  }
+}
