@@ -11,11 +11,15 @@ const MainContentRight = () => {
     const fectchData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts"
+        const res = await fetch(
+          // "https://jsonplaceholder.typicode.com/posts"
+          // "https://api.github.com/users/Remigit99"
+          // https://api.github.com/user/repos
+          // "https://api.github.com/repos/Remigit99"
+         " https://api.github.com/users/Remigit99/repos"
         );
-        const data = await response.json();
-        // console.log(data)
+        const data = await res.json();
+        console.log(data)
         setRepo(data);
         setIsLoading(false);
       } catch (error) {
