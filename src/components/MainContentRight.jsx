@@ -4,6 +4,7 @@ import Repos from "./Repos";
 const MainContentRight = () => {
   const [repos, setRepo] = useState([]);
   const [isloading, setIsLoading] = useState(false);
+
   // const [currentPage, setCurrentPage] = useState(1);
   // const [reposPerPage, setReposPerPage] = useState(10);
 
@@ -12,15 +13,16 @@ const MainContentRight = () => {
       setIsLoading(true);
       try {
         const res = await fetch(
-          // "https://jsonplaceholder.typicode.com/posts"
-          // "https://api.github.com/users/Remigit99"
-          // https://api.github.com/user/repos
-          // "https://api.github.com/repos/Remigit99"
          " https://api.github.com/users/Remigit99/repos"
         );
         const data = await res.json();
-        console.log(data)
+        // console.log(data)
         setRepo(data);
+
+
+
+
+
         setIsLoading(false);
       } catch (error) {
         console.log(error);
