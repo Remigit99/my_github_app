@@ -3,6 +3,7 @@ const Pagination = ({ reposPerPage, length, handlePagination }) => {
 
   for (let i = 1; i <= Math.ceil(length / reposPerPage); i++) {
     paginationNumbers.push(i);
+    console.log(i);
   }
 
   return (
