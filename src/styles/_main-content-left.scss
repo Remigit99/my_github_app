@@ -81,3 +81,29 @@
     text-overflow: none;
     scrollbar-width: none;
 }
+
+
+
+/*==========  MEDIA QUERY (SMALL DEVICES) =====*/
+@media screen and (max-width: 600px) {
+    .main__content-left{
+        display: grid;
+        place-items: center;
+        height: 50vh;
+        max-width: 600px;
+    }
+    
+}
+
+
+/*==========  MEDIA QUERY (TABLET DEVICES) =====*/
+
+@media screen and (max-width: 1024px) {
+    .main__content-left{
+        display: grid;
+        place-items: center;
+        height: 50vh;
+
+    }
+    
+}

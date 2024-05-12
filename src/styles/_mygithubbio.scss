@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  @include marginItem()
+  @include marginItem();
 }
 
 .content__left-main {
@@ -67,11 +67,9 @@
         color: var(--clr-white);
         transition: var(--transition);
 
-       
         &:hover {
-            color: var(--clr-blue);
-
-          }
+          color: var(--clr-blue);
+        }
       }
     }
 
@@ -83,11 +81,36 @@
         color: var(--clr-white);
         transition: var(--transition);
 
-
         &:hover {
-            color: var(--clr-blue);
-          }
+          color: var(--clr-blue);
+        }
       }
     }
+  }
+}
+
+/*==========  MEDIA QUERY (SMALL DEVICES) =====*/
+@media screen and (max-width: 600px) {
+  .content__left-main {
+    text-align: center;
+  }
+
+  .avatar__img {
+    position: relative;
+    left: 7rem;
+  }
+}
+
+/*==========  MEDIA QUERY (TABLET DEVICES) =====*/
+
+@media screen and (max-width: 1024px) {
+  .content__left-main {
+    text-align: center;
+    width: max-content;
+  }
+
+  .avatar__img {
+    position: relative;
+    left: 7rem;
   }
 }

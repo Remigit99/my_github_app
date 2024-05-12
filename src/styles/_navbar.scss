@@ -1,88 +1,102 @@
-nav{
-    background-color: var(--clr-bg1);
-    height: 4rem;
-    width: 100vw;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: grid;
-    place-items: center;
-    // box-shadow: 1rem 0 3px var(--clr-gray1);
-    border-bottom: 1px solid var(--clr-gray3);
+nav {
+  background-color: var(--clr-bg1);
+  height: 4rem;
+  width: 100dvw;
+  position: relative;
+  top: 0;
+  left: 0;
+  // right: 0;
+  display: grid;
+  place-items: center;
+  // box-shadow: 1rem 0 3px var(--clr-gray1);
+  border-bottom: 1px solid var(--clr-gray3);
 
-
-.nav__container{
+  .nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .nav__icon{
-        font-size: 1.4rem;
-        cursor: pointer;
-        color: var(--clr-gray1);
+    .nav__icon {
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--clr-gray1);
     }
 
-    .nav__container-left{
+    .nav__container-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+
+      .nav__github-logo {
+        .github__logo {
+          font-size: 2.5rem;
+          color: var(--white);
+        }
+      }
+    }
+
+    .nav__container-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+
+      .search__box {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 1.5rem;
+        padding: 0.4rem;
+        border: 1px solid gray;
+        border-radius: 0.5rem;
 
-        .nav__github-logo{
-
-            .github__logo{
-                font-size: 2.5rem;
-            color: var(--white);
-
+        input {
+          background-color: transparent;
+          border: none;
+          font-family: inherit;
+          color: var(--white);
         }
+      }
 
-        }
-    }
-
-
-    .nav__container-right{
+      .create_new-repo {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 1.5rem;
+        justify-content: center;
+        border: 1px solid var(--clr-gray1);
+        padding: 0.2rem;
+        border-radius: 0.5rem;
 
-        .search__box{
-            display: flex;
-            align-items: center;
-            padding: 0.4rem;
-                border: 1px solid gray;
-                border-radius: 0.5rem;
-
-
-            input{
-                background-color: transparent;
-               border: none;
-               font-family: inherit;
-               color: var(--white);
-            }
+        .arrow__down {
+          font-size: 1rem;
         }
-
-        .create_new-repo{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--clr-gray1);
-            padding: 0.2rem;
-            border-radius: 0.5rem;
-
-            .arrow__down{
-                font-size: 1rem;
-            }
-        }
-
-
-     
+      }
     }
-
-
-
-    
+  }
 }
 
+/*==========  MEDIA QUERY (SMALL DEVICES) =====*/
+@media screen and (max-width: 600px) {
+}
+
+/*==========  MEDIA QUERY (TABLET DEVICES) =====*/
+
+@media screen and (max-width: 1024px) {
+  .nav__container-left {
+    h3 {
+      display: none;
+    }
+  }
+
+  .nav__container-right {
+    input {
+      display: none;
+    }
+
+    .create_new-repo {
+      display: none;
+    }
+
+    .notification {
+      display: none;
+    }
+  }
 }

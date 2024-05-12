@@ -1,6 +1,4 @@
-
-
-const Pagination = ({ reposPerPage, length }) => {
+const Pagination = ({ reposPerPage, length, handlePagination }) => {
   const paginationNumbers = [];
 
   for (let i = 1; i <= Math.ceil(length / reposPerPage); i++) {
@@ -8,9 +6,18 @@ const Pagination = ({ reposPerPage, length }) => {
   }
 
   return (
-    <div className='pagination'>
+    <div className="pagination">
       {paginationNumbers.map((pageNumber) => (
-        <button key={pageNumber}>{pageNumber}</button>
+        <span key={pageNumber}>
+          <button className="pagination-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              handlePagination(pageNumber);
+            }}
+          >
+            {pageNumber}
+          </button>
+        </span>
       ))}
     </div>
   );

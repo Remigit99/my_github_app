@@ -40,7 +40,7 @@ const MyGithubBio = () => {
       {
         // id, avatar_url, html_url, name, location, public_repo, repos_url
         bioEmptyArray.map((info) => (
-          <div key={info.id} className= "user__detail">
+          <div key={info.name} className= "user__detail">
             <div className="avatar__img">
               <img src={info.avatar_url} alt="avatar_pic" />
             </div>

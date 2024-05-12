@@ -5,19 +5,9 @@ import Pagination from "./Pagination";
 const MainContentRight = () => {
   const [repos, setRepo] = useState([]);
   const [isloading, setIsLoading] = useState(false);
-
   const [currentPage, setCurrentPage] = useState(1);
-  const [reposPerPage, setReposPerPage] = useState(10);
+  const [reposPerPage] = useState(6);
 
-  const handlePagination = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
-  // Inside your component's return...
-  // <Pagination
-  //   length={posts.length}
-  //   postsPerPage={postsPerPage}
-  // />
 
   useEffect(() => {
     const fectchData = async () => {
@@ -39,13 +29,21 @@ const MainContentRight = () => {
     fectchData();
   }, []);
 
+  const indexOfLastRepo = currentPage * reposPerPage;
+  const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
+const currentRepos = repos.slice(indexOfFirstRepo - indexOfLastRepo);
+
+
+const handlePagination = (pageNumber) => setCurrentPage(pageNumber);
+
+
   return (
     <div className="main__content-right">
       <div className="content__right-main">
         <h2>Repositories : {repos.length}</h2>
 
         <div className="repos__main">
-          <Repos isloading={isloading} repos={repos} />
+          <Repos isloading={isloading} repos={currentRepos} />
 
           <Pagination
             handlePagination={handlePagination}

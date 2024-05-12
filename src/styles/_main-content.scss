@@ -5,7 +5,18 @@
     grid-template-columns: 1.2fr 3fr;
 }
 
+/*==========  MEDIA QUERY (SMALL DEVICES) =====*/
 @media screen and (max-width: 600px) {
+    .main__content{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+/*==========  MEDIA QUERY (TABLET DEVICES) =====*/
+
+@media screen and (max-width: 1024px) {
     .main__content{
         grid-template-columns: 1fr;
     }
